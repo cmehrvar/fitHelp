@@ -1,0 +1,828 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E7F600AB2176E8FB00D8E22D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F600AA2176E8FB00D8E22D /* AppDelegate.swift */; };
+		E7F600AD2176E8FB00D8E22D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F600AC2176E8FB00D8E22D /* ViewController.swift */; };
+		E7F600B02176E8FB00D8E22D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F600AE2176E8FB00D8E22D /* Main.storyboard */; };
+		E7F600B22176E8FB00D8E22D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F600B12176E8FB00D8E22D /* Assets.xcassets */; };
+		E7F600B52176E8FB00D8E22D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F600B32176E8FB00D8E22D /* LaunchScreen.storyboard */; };
+		E7F600C02176E8FB00D8E22D /* fitHelpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F600BF2176E8FB00D8E22D /* fitHelpTests.swift */; };
+		E7F600CB2176E8FB00D8E22D /* fitHelpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F600CA2176E8FB00D8E22D /* fitHelpUITests.swift */; };
+		E7F600D02176E8FB00D8E22D /* fitHelp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E7F600CF2176E8FB00D8E22D /* fitHelp WatchKit App.app */; };
+		E7F600D62176E8FB00D8E22D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F600D42176E8FB00D8E22D /* Interface.storyboard */; };
+		E7F600D82176E8FB00D8E22D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F600D72176E8FB00D8E22D /* Assets.xcassets */; };
+		E7F600DF2176E8FB00D8E22D /* fitHelp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7F600DE2176E8FB00D8E22D /* fitHelp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E7F600E42176E8FB00D8E22D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F600E32176E8FB00D8E22D /* InterfaceController.swift */; };
+		E7F600E62176E8FB00D8E22D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F600E52176E8FB00D8E22D /* ExtensionDelegate.swift */; };
+		E7F600E82176E8FB00D8E22D /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F600E72176E8FB00D8E22D /* NotificationController.swift */; };
+		E7F600EA2176E8FB00D8E22D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7F600E92176E8FB00D8E22D /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7F600BC2176E8FB00D8E22D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7F6009F2176E8FB00D8E22D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7F600A62176E8FB00D8E22D;
+			remoteInfo = fitHelp;
+		};
+		E7F600C72176E8FB00D8E22D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7F6009F2176E8FB00D8E22D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7F600A62176E8FB00D8E22D;
+			remoteInfo = fitHelp;
+		};
+		E7F600D12176E8FB00D8E22D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7F6009F2176E8FB00D8E22D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7F600CE2176E8FB00D8E22D;
+			remoteInfo = "fitHelp WatchKit App";
+		};
+		E7F600E02176E8FB00D8E22D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7F6009F2176E8FB00D8E22D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7F600DD2176E8FB00D8E22D;
+			remoteInfo = "fitHelp WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E7F600F22176E8FB00D8E22D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E7F600DF2176E8FB00D8E22D /* fitHelp WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F600F62176E8FB00D8E22D /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E7F600D02176E8FB00D8E22D /* fitHelp WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E7F600A72176E8FB00D8E22D /* fitHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7F600AA2176E8FB00D8E22D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E7F600AC2176E8FB00D8E22D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E7F600AF2176E8FB00D8E22D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E7F600B12176E8FB00D8E22D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7F600B42176E8FB00D8E22D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E7F600B62176E8FB00D8E22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7F600BB2176E8FB00D8E22D /* fitHelpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fitHelpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7F600BF2176E8FB00D8E22D /* fitHelpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitHelpTests.swift; sourceTree = "<group>"; };
+		E7F600C12176E8FB00D8E22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7F600C62176E8FB00D8E22D /* fitHelpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fitHelpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7F600CA2176E8FB00D8E22D /* fitHelpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitHelpUITests.swift; sourceTree = "<group>"; };
+		E7F600CC2176E8FB00D8E22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7F600CF2176E8FB00D8E22D /* fitHelp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fitHelp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7F600D52176E8FB00D8E22D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		E7F600D72176E8FB00D8E22D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7F600D92176E8FB00D8E22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7F600DE2176E8FB00D8E22D /* fitHelp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "fitHelp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7F600E32176E8FB00D8E22D /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		E7F600E52176E8FB00D8E22D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		E7F600E72176E8FB00D8E22D /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		E7F600E92176E8FB00D8E22D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7F600EB2176E8FB00D8E22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7F600EC2176E8FB00D8E22D /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7F600A42176E8FB00D8E22D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F600B82176E8FB00D8E22D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F600C32176E8FB00D8E22D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F600DB2176E8FB00D8E22D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E7F6009E2176E8FB00D8E22D = {
+			isa = PBXGroup;
+			children = (
+				E7F600A92176E8FB00D8E22D /* fitHelp */,
+				E7F600BE2176E8FB00D8E22D /* fitHelpTests */,
+				E7F600C92176E8FB00D8E22D /* fitHelpUITests */,
+				E7F600D32176E8FB00D8E22D /* fitHelp WatchKit App */,
+				E7F600E22176E8FB00D8E22D /* fitHelp WatchKit Extension */,
+				E7F600A82176E8FB00D8E22D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E7F600A82176E8FB00D8E22D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7F600A72176E8FB00D8E22D /* fitHelp.app */,
+				E7F600BB2176E8FB00D8E22D /* fitHelpTests.xctest */,
+				E7F600C62176E8FB00D8E22D /* fitHelpUITests.xctest */,
+				E7F600CF2176E8FB00D8E22D /* fitHelp WatchKit App.app */,
+				E7F600DE2176E8FB00D8E22D /* fitHelp WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7F600A92176E8FB00D8E22D /* fitHelp */ = {
+			isa = PBXGroup;
+			children = (
+				E7F600AA2176E8FB00D8E22D /* AppDelegate.swift */,
+				E7F600AC2176E8FB00D8E22D /* ViewController.swift */,
+				E7F600AE2176E8FB00D8E22D /* Main.storyboard */,
+				E7F600B12176E8FB00D8E22D /* Assets.xcassets */,
+				E7F600B32176E8FB00D8E22D /* LaunchScreen.storyboard */,
+				E7F600B62176E8FB00D8E22D /* Info.plist */,
+			);
+			path = fitHelp;
+			sourceTree = "<group>";
+		};
+		E7F600BE2176E8FB00D8E22D /* fitHelpTests */ = {
+			isa = PBXGroup;
+			children = (
+				E7F600BF2176E8FB00D8E22D /* fitHelpTests.swift */,
+				E7F600C12176E8FB00D8E22D /* Info.plist */,
+			);
+			path = fitHelpTests;
+			sourceTree = "<group>";
+		};
+		E7F600C92176E8FB00D8E22D /* fitHelpUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E7F600CA2176E8FB00D8E22D /* fitHelpUITests.swift */,
+				E7F600CC2176E8FB00D8E22D /* Info.plist */,
+			);
+			path = fitHelpUITests;
+			sourceTree = "<group>";
+		};
+		E7F600D32176E8FB00D8E22D /* fitHelp WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				E7F600D42176E8FB00D8E22D /* Interface.storyboard */,
+				E7F600D72176E8FB00D8E22D /* Assets.xcassets */,
+				E7F600D92176E8FB00D8E22D /* Info.plist */,
+			);
+			path = "fitHelp WatchKit App";
+			sourceTree = "<group>";
+		};
+		E7F600E22176E8FB00D8E22D /* fitHelp WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E7F600E32176E8FB00D8E22D /* InterfaceController.swift */,
+				E7F600E52176E8FB00D8E22D /* ExtensionDelegate.swift */,
+				E7F600E72176E8FB00D8E22D /* NotificationController.swift */,
+				E7F600E92176E8FB00D8E22D /* Assets.xcassets */,
+				E7F600EB2176E8FB00D8E22D /* Info.plist */,
+				E7F600EC2176E8FB00D8E22D /* PushNotificationPayload.apns */,
+			);
+			path = "fitHelp WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7F600A62176E8FB00D8E22D /* fitHelp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7F600F72176E8FB00D8E22D /* Build configuration list for PBXNativeTarget "fitHelp" */;
+			buildPhases = (
+				E7F600A32176E8FB00D8E22D /* Sources */,
+				E7F600A42176E8FB00D8E22D /* Frameworks */,
+				E7F600A52176E8FB00D8E22D /* Resources */,
+				E7F600F62176E8FB00D8E22D /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7F600D22176E8FB00D8E22D /* PBXTargetDependency */,
+			);
+			name = fitHelp;
+			productName = fitHelp;
+			productReference = E7F600A72176E8FB00D8E22D /* fitHelp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E7F600BA2176E8FB00D8E22D /* fitHelpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7F600FA2176E8FB00D8E22D /* Build configuration list for PBXNativeTarget "fitHelpTests" */;
+			buildPhases = (
+				E7F600B72176E8FB00D8E22D /* Sources */,
+				E7F600B82176E8FB00D8E22D /* Frameworks */,
+				E7F600B92176E8FB00D8E22D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7F600BD2176E8FB00D8E22D /* PBXTargetDependency */,
+			);
+			name = fitHelpTests;
+			productName = fitHelpTests;
+			productReference = E7F600BB2176E8FB00D8E22D /* fitHelpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E7F600C52176E8FB00D8E22D /* fitHelpUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7F600FD2176E8FB00D8E22D /* Build configuration list for PBXNativeTarget "fitHelpUITests" */;
+			buildPhases = (
+				E7F600C22176E8FB00D8E22D /* Sources */,
+				E7F600C32176E8FB00D8E22D /* Frameworks */,
+				E7F600C42176E8FB00D8E22D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7F600C82176E8FB00D8E22D /* PBXTargetDependency */,
+			);
+			name = fitHelpUITests;
+			productName = fitHelpUITests;
+			productReference = E7F600C62176E8FB00D8E22D /* fitHelpUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		E7F600CE2176E8FB00D8E22D /* fitHelp WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7F600F32176E8FB00D8E22D /* Build configuration list for PBXNativeTarget "fitHelp WatchKit App" */;
+			buildPhases = (
+				E7F600CD2176E8FB00D8E22D /* Resources */,
+				E7F600F22176E8FB00D8E22D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7F600E12176E8FB00D8E22D /* PBXTargetDependency */,
+			);
+			name = "fitHelp WatchKit App";
+			productName = "fitHelp WatchKit App";
+			productReference = E7F600CF2176E8FB00D8E22D /* fitHelp WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		E7F600DD2176E8FB00D8E22D /* fitHelp WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7F600EF2176E8FB00D8E22D /* Build configuration list for PBXNativeTarget "fitHelp WatchKit Extension" */;
+			buildPhases = (
+				E7F600DA2176E8FB00D8E22D /* Sources */,
+				E7F600DB2176E8FB00D8E22D /* Frameworks */,
+				E7F600DC2176E8FB00D8E22D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "fitHelp WatchKit Extension";
+			productName = "fitHelp WatchKit Extension";
+			productReference = E7F600DE2176E8FB00D8E22D /* fitHelp WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7F6009F2176E8FB00D8E22D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Cina Mehrvar";
+				TargetAttributes = {
+					E7F600A62176E8FB00D8E22D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					E7F600BA2176E8FB00D8E22D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E7F600A62176E8FB00D8E22D;
+					};
+					E7F600C52176E8FB00D8E22D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E7F600A62176E8FB00D8E22D;
+					};
+					E7F600CE2176E8FB00D8E22D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					E7F600DD2176E8FB00D8E22D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E7F600A22176E8FB00D8E22D /* Build configuration list for PBXProject "fitHelp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E7F6009E2176E8FB00D8E22D;
+			productRefGroup = E7F600A82176E8FB00D8E22D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7F600A62176E8FB00D8E22D /* fitHelp */,
+				E7F600BA2176E8FB00D8E22D /* fitHelpTests */,
+				E7F600C52176E8FB00D8E22D /* fitHelpUITests */,
+				E7F600CE2176E8FB00D8E22D /* fitHelp WatchKit App */,
+				E7F600DD2176E8FB00D8E22D /* fitHelp WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7F600A52176E8FB00D8E22D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F600B52176E8FB00D8E22D /* LaunchScreen.storyboard in Resources */,
+				E7F600B22176E8FB00D8E22D /* Assets.xcassets in Resources */,
+				E7F600B02176E8FB00D8E22D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F600B92176E8FB00D8E22D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F600C42176E8FB00D8E22D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F600CD2176E8FB00D8E22D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F600D82176E8FB00D8E22D /* Assets.xcassets in Resources */,
+				E7F600D62176E8FB00D8E22D /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F600DC2176E8FB00D8E22D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F600EA2176E8FB00D8E22D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7F600A32176E8FB00D8E22D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F600AD2176E8FB00D8E22D /* ViewController.swift in Sources */,
+				E7F600AB2176E8FB00D8E22D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F600B72176E8FB00D8E22D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F600C02176E8FB00D8E22D /* fitHelpTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F600C22176E8FB00D8E22D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F600CB2176E8FB00D8E22D /* fitHelpUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7F600DA2176E8FB00D8E22D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F600E82176E8FB00D8E22D /* NotificationController.swift in Sources */,
+				E7F600E62176E8FB00D8E22D /* ExtensionDelegate.swift in Sources */,
+				E7F600E42176E8FB00D8E22D /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7F600BD2176E8FB00D8E22D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7F600A62176E8FB00D8E22D /* fitHelp */;
+			targetProxy = E7F600BC2176E8FB00D8E22D /* PBXContainerItemProxy */;
+		};
+		E7F600C82176E8FB00D8E22D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7F600A62176E8FB00D8E22D /* fitHelp */;
+			targetProxy = E7F600C72176E8FB00D8E22D /* PBXContainerItemProxy */;
+		};
+		E7F600D22176E8FB00D8E22D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7F600CE2176E8FB00D8E22D /* fitHelp WatchKit App */;
+			targetProxy = E7F600D12176E8FB00D8E22D /* PBXContainerItemProxy */;
+		};
+		E7F600E12176E8FB00D8E22D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7F600DD2176E8FB00D8E22D /* fitHelp WatchKit Extension */;
+			targetProxy = E7F600E02176E8FB00D8E22D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E7F600AE2176E8FB00D8E22D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7F600AF2176E8FB00D8E22D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E7F600B32176E8FB00D8E22D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7F600B42176E8FB00D8E22D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E7F600D42176E8FB00D8E22D /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7F600D52176E8FB00D8E22D /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E7F600ED2176E8FB00D8E22D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E7F600EE2176E8FB00D8E22D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7F600F02176E8FB00D8E22D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "fitHelp WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cmehrvar.fitHelp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		E7F600F12176E8FB00D8E22D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "fitHelp WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cmehrvar.fitHelp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		E7F600F42176E8FB00D8E22D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = fitHelp_WatchKit_Extension;
+				INFOPLIST_FILE = "fitHelp WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = cmehrvar.fitHelp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		E7F600F52176E8FB00D8E22D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = fitHelp_WatchKit_Extension;
+				INFOPLIST_FILE = "fitHelp WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = cmehrvar.fitHelp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		E7F600F82176E8FB00D8E22D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fitHelp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cmehrvar.fitHelp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7F600F92176E8FB00D8E22D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fitHelp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cmehrvar.fitHelp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E7F600FB2176E8FB00D8E22D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fitHelpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cmehrvar.fitHelpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fitHelp.app/fitHelp";
+			};
+			name = Debug;
+		};
+		E7F600FC2176E8FB00D8E22D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fitHelpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cmehrvar.fitHelpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fitHelp.app/fitHelp";
+			};
+			name = Release;
+		};
+		E7F600FE2176E8FB00D8E22D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fitHelpUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cmehrvar.fitHelpUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = fitHelp;
+			};
+			name = Debug;
+		};
+		E7F600FF2176E8FB00D8E22D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = fitHelpUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cmehrvar.fitHelpUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = fitHelp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7F600A22176E8FB00D8E22D /* Build configuration list for PBXProject "fitHelp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7F600ED2176E8FB00D8E22D /* Debug */,
+				E7F600EE2176E8FB00D8E22D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7F600EF2176E8FB00D8E22D /* Build configuration list for PBXNativeTarget "fitHelp WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7F600F02176E8FB00D8E22D /* Debug */,
+				E7F600F12176E8FB00D8E22D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7F600F32176E8FB00D8E22D /* Build configuration list for PBXNativeTarget "fitHelp WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7F600F42176E8FB00D8E22D /* Debug */,
+				E7F600F52176E8FB00D8E22D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7F600F72176E8FB00D8E22D /* Build configuration list for PBXNativeTarget "fitHelp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7F600F82176E8FB00D8E22D /* Debug */,
+				E7F600F92176E8FB00D8E22D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7F600FA2176E8FB00D8E22D /* Build configuration list for PBXNativeTarget "fitHelpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7F600FB2176E8FB00D8E22D /* Debug */,
+				E7F600FC2176E8FB00D8E22D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7F600FD2176E8FB00D8E22D /* Build configuration list for PBXNativeTarget "fitHelpUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7F600FE2176E8FB00D8E22D /* Debug */,
+				E7F600FF2176E8FB00D8E22D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E7F6009F2176E8FB00D8E22D /* Project object */;
+}
