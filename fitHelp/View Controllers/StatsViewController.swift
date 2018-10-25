@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class StatsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -101,114 +102,189 @@ class StatsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
 
     
-    func handleWeight(timePeriod: Double){
+    func handleWeight(timePeriod: Int){
         
         if timePeriod == 1 {
             
             timeRangeOutlet.text = "1 Day"
-            pastTimeRange.text = "Prior Day"
-            currentTimeRange.text = "Past Day"
+            pastTimeRange.text = "Yesterday Avg"
+            currentTimeRange.text = "Today Avg"
             changeTimeRange.text = "1 Day Change"
             
         } else if timePeriod == 3 {
             
             timeRangeOutlet.text = "3 Days"
-            pastTimeRange.text = "Prior 3 Days"
-            currentTimeRange.text = "Past 3 Days"
+            pastTimeRange.text = "Prior 3 Day Avg"
+            currentTimeRange.text = "3 Day Avg"
             changeTimeRange.text = "3 Day Change"
             
         } else if timePeriod == 7 {
             
-            timeRangeOutlet.text = "7 Days"
-            pastTimeRange.text = "Prior 7 Days"
-            currentTimeRange.text = "Past 7 Days"
-            changeTimeRange.text = "1 Week Change"
+            timeRangeOutlet.text = "1 Week"
+            pastTimeRange.text = "Last Week Avg"
+            currentTimeRange.text = "This Week Avg"
+            changeTimeRange.text = "Weekly Change"
             
         } else if timePeriod == 30 {
             
             timeRangeOutlet.text = "1 Month"
-            pastTimeRange.text = "Prior Month"
-            currentTimeRange.text = "Past Month"
-            changeTimeRange.text = "1 Month Change"
+            pastTimeRange.text = "Last Month Avg"
+            currentTimeRange.text = "This Month Avg"
+            changeTimeRange.text = "Monthly Change"
             
         } else if timePeriod == 90 {
             
             timeRangeOutlet.text = "3 Months"
-            pastTimeRange.text = "Prior 3 Months"
-            currentTimeRange.text = "Past 3 Months"
+            pastTimeRange.text = "Prior 3 Month Avg"
+            currentTimeRange.text = "3 Month Avg"
             changeTimeRange.text = "3 Month Change"
             
         } else if timePeriod == 182 {
             
             timeRangeOutlet.text = "6 Months"
-            pastTimeRange.text = "Prior 6 Months"
-            currentTimeRange.text = "Past 6 Months"
+            pastTimeRange.text = "Prior 6 Month Avg"
+            currentTimeRange.text = "6 Month Avg"
             changeTimeRange.text = "6 Month Change"
             
         }
         
         
         if let data = rootController?.userData {
-            
-            if let userWeight = data["weight"] as? [String:Double] {
 
-                var currentPeriod: Double = 0
-                var currentPeriodCount: Double = 0
+            if let userWeight = data["weight"] as? [AnyHashable:Double] {
                 
-                var lastPeriod: Double = 0
-                var lastPeriodCount: Double = 0
+                var weightValues = [Int:[Double]]()
                 
                 for weight in userWeight {
                     
-                    let dateFormatter = DateFormatter()
-                    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss +zzzz"
-                    let date = dateFormatter.date(from: weight.key)
+                    var date = Date()
                     
-                    guard let timeSinceNow = date?.timeIntervalSince(Date()) else {return}
-                    let formattedTimeSinceNow = -(((timeSinceNow/60)/60)/60)
+                    if let value = weight.key as? Timestamp {
+                        
+                        date = value.dateValue()
+                        
+                    } else if let value = weight.key as? String {
+                        
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss +zzzz"
+                  
+                        if let tempDate = dateFormatter.date(from: value){
+                            
+                            date = tempDate
+                            
+                        }
+                    }
+
+                    let interval = Calendar.current.dateComponents([.day, .month, .year], from: date, to: Date())
+  
+                    if let day = interval.day, let month = interval.month, let year = interval.year {
+                        
+                        let daysAgo = day + (month*30) + (year*365)
+                        
+                        if weightValues[daysAgo] == nil {
+                            
+                            weightValues[daysAgo] = [weight.value]
+                            
+                        } else {
+                            
+                            weightValues[daysAgo]?.append(weight.value)
+                            
+                        }
+                    }
+                }
+                
+                var avgWeightValues = [Int:Double]()
+                
+                for values in weightValues {
                     
-                    print(formattedTimeSinceNow)
-                    print(timePeriod)
+                    var avg:Double = 0
                     
-                    if formattedTimeSinceNow <= timePeriod {
+                    for value in values.value {
                         
-                        currentPeriod += weight.value
-                        currentPeriodCount += 1
+                        avg += value
                         
-                    } else if formattedTimeSinceNow <= (timePeriod*2) {
+                    }
+                    
+                    avg /= Double(values.value.count)
+                    
+                    avgWeightValues[values.key] = avg
+                    
+                }
+                
+                
+                var currentPeriod = [Double]()
+                var lastPeriod = [Double]()
+
+                for value in avgWeightValues {
+                    
+                    if value.key < timePeriod {
                         
-                        lastPeriod += weight.value
-                        lastPeriodCount += 1
+                        currentPeriod.append(value.value)
+                        
+                    } else if value.key >= timePeriod && value.key < (timePeriod*2) {
+                        
+                        lastPeriod.append(value.value)
                         
                     }
                 }
                 
-                currentPeriod = ((currentPeriod/currentPeriodCount)*10).rounded()
-                currentPeriod /= 10
-                lastPeriod = ((lastPeriod/lastPeriodCount)*10).rounded()
-                lastPeriod /= 10
+                var currentAvg: Double = 0
+                var lastAvg: Double = 0
                 
-                var change = currentPeriod/lastPeriod
-                change = 1 - change
-                change = (change*1000).rounded()
-                change /= 10
-
-                if lastPeriodCount == 0 {
+                for value in currentPeriod {
                     
-                    pastWeight.text = "N/A"
-                    changeInWeight.text = "N/A"
-                    
-                } else {
-                    
-                    pastWeight.text = "\(lastPeriod) lbs"
-                    changeInWeight.text = "\(change) %"
+                    currentAvg += value
                     
                 }
                 
+                for value in lastPeriod {
+                    
+                    lastAvg += value
+                    
+                }
                 
-                currentWeight.text = "\(currentPeriod) lbs"
+                currentAvg /= Double(currentPeriod.count)
+                lastAvg /= Double(lastPeriod.count)
                 
                 
+                currentAvg = (currentAvg*10).rounded()
+                currentAvg /= 10
+                lastAvg = (lastAvg*10).rounded()
+                lastAvg /= 10
+                
+                var change = currentAvg/lastAvg
+                change = 1 - change
+                change = (change*1000).rounded()
+                change /= 10
+                change = -change
+
+                if lastPeriod.count == 0 {
+                    
+                    pastWeight.text = "N/A"
+                    pastWeight.textColor = UIColor.lightGray
+                    changeInWeight.text = "N/A"
+                    changeInWeight.textColor = UIColor.lightGray
+                    
+                } else {
+                    
+                    pastWeight.text = "\(lastAvg) lbs"
+                    pastWeight.textColor = UIColor.white
+                    
+                    if change > 0 {
+                        
+                        changeInWeight.text = "+\(change) %"
+                        changeInWeight.textColor = UIColor.red
+                        
+                    } else if change < 0 {
+                        
+                        changeInWeight.text = "\(change) %"
+                        changeInWeight.textColor = UIColor.green
+                        
+                    }
+                }
+
+                currentWeight.text = "\(currentAvg) lbs"
+   
             }
         }
     }

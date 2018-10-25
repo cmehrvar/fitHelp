@@ -15,10 +15,18 @@ class EnterWeightViewController: UIViewController {
 
     @IBOutlet weak var weightLabel: UILabel!
     
+    func close(viewToShow: String) {
+        
+        rootController?.showView(viewToShow: viewToShow)
+        weightLabel.text = "0"
+        
+    }
+    
+
+    
     @IBAction func back(_ sender: Any) {
         
-        rootController?.showView(viewToShow: "addEntry")
-        weightLabel.text = "0"
+        close(viewToShow: "addEntry")
         
     }
     
@@ -186,9 +194,10 @@ class EnterWeightViewController: UIViewController {
         
         if weight != 0 {
         
-            let data = ["weight.\(Date())" : weight]
+            let data = ["weight.\(Timestamp())" : weight]
             
             let db = Firestore.firestore()
+        
             
             if let id = Auth.auth().currentUser?.uid {
  
@@ -200,7 +209,7 @@ class EnterWeightViewController: UIViewController {
                         
                     } else {
                         
-                        
+                        self.close(viewToShow: "stats")
     
                     }
                 }
